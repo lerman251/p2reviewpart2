@@ -49,5 +49,15 @@ const array = ["array"];
 let default1;
 
 
+let foodItems = [
+    {name: "burger", price: 12.99},
+    {name: "hotdog", price: 3.99},
+    {name: "taco", price: 5.99}
+];
+const foodList = document.getElementById("foodList");
 
-
+foodItems.forEach(food => {
+    const foodName = document.createElement("li");
+    foodName.textContent = food.name;
+    foodList.appendChild(foodName);
+});
